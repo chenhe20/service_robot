@@ -1,11 +1,17 @@
 <template>
   <div id="app">
     <div>
-      <navigation-bar></navigation-bar>
+      <el-header>
+        <navigation-bar></navigation-bar>
+      </el-header>
     </div>
+
     <div>
-      <router-view></router-view>
+      <el-main>
+        <router-view></router-view>
+      </el-main>
     </div>
+
   </div>
 </template>
 
@@ -21,6 +27,7 @@ export default {
 </script>
 
 <style>
+@import "styles/global.css";
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

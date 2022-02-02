@@ -1,10 +1,12 @@
 <template>
-    $END$
+    <div>
+        <p>Author He Chen 23</p>
+    </div>
 </template>
 
 <script>
     export default {
-        name: ""
+        name: "AboutMe"
     }
 </script>
 
