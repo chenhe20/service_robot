@@ -1,28 +1,9 @@
 <template>
-    <div>
-        <h1 class="page-title">Welcome to the playground</h1>
-        <div>
+    <div style="height: 500px">
+        <h1 class="page-title">Graph</h1>
             <el-aside>
-                <el-col :span="12">
+                <el-col :span="15">
                     <el-menu>
-<!--                        <el-submenu index="1">-->
-<!--                            <template slot="title">-->
-<!--                                <i class="el-icon-location"></i>-->
-<!--                                <span></span>-->
-<!--                            </template>-->
-<!--                            <el-menu-item-group>-->
-<!--                                <template slot="title">分组一</template>-->
-<!--                                <el-menu-item index="1-1">选项1</el-menu-item>-->
-<!--                                <el-menu-item index="1-2">选项2</el-menu-item>-->
-<!--                            </el-menu-item-group>-->
-<!--                            <el-menu-item-group title="分组2">-->
-<!--                                <el-menu-item index="1-3">选项3</el-menu-item>-->
-<!--                            </el-menu-item-group>-->
-<!--                            <el-submenu index="1-4">-->
-<!--                                <template slot="title">选项4</template>-->
-<!--                                <el-menu-item index="1-4-1">选项1</el-menu-item>-->
-<!--                            </el-submenu>-->
-<!--                        </el-submenu>-->
                         <el-menu-item index="1">
                             <i class="el-icon-menu"></i>
                             <span slot="title" @click="createRandomCy">Generate</span>
@@ -42,11 +23,7 @@
                     </el-menu>
                 </el-col>
             </el-aside>
-<!--            <el-button id="graphGenerateButton" @click="createRandomCy">Generate a random graph</el-button>-->
-            <div id="cy" style="position: center">'
-            </div>
-        </div>
-
+            <div id="cy"></div>
     </div>
 </template>
 
@@ -61,14 +38,13 @@
         mounted: {},
         methods: {
             createRandomCy() {
-                console.log('hihihihi')
                 var cy = cytoscape({
                     container: document.getElementById('cy')
                 });
                 cy.add({
                     group: 'nodes',
                     data: { weight: 75 },
-                    position: { x: 200, y: 200 }
+                    position: { x: 100, y: 100 }
                 });
                 cy.add([
                     { group: 'nodes', data: { id: 'n0' }, position: { x: 100, y: 100 } },
@@ -91,8 +67,8 @@
         margin: 5rem;
     }
 
+
     #cy {
-        left: -10rem;
-        margin: -10rem;
+        margin: -100rem;
     }
 </style>
